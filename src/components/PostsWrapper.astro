@@ -1,0 +1,43 @@
+---
+import PostCard from "./PostCard.astro"; 
+
+interface Post {
+  imageUrl: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props as Props;
+---
+
+<div class="posts-wrapper">
+  {
+    posts.map((post) => (
+      <PostCard
+        imageUrl={post.imageUrl}
+        title={post.title}
+        description={post.description}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .posts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; /* Aliniază postările pe centrul containerului */
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .posts-wrapper {
+      gap: 0.5rem; /* Diminuarea spațiului dintre postări pentru ecrane mici */
+    }
+  }
+</style>
