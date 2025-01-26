@@ -1,4 +1,5 @@
----
+<!-- ---
+<<<<<<< HEAD
 
 ---
 
@@ -124,5 +125,160 @@
 
   .contact-one__btn:hover {
     background-color: #005bb5;
+=======
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+  <div class="contact-page">
+    <h1 class="contact-title">Contact Us</h1>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <Icon name="material-symbols:location-on" />
+          <span>123 Generic Street, Generic City</span>
+        </div>
+        <div class="contact-item">
+          <Icon name="material-symbols:phone-android-rounded" />
+          <span>(+123) 456 789</span>
+        </div>
+        <div class="contact-item">
+          <Icon name="material-symbols:mail" />
+          <span>contact@genericemail.com</span>
+        </div>
+      </div>
+
+      <form class="form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="newsletter">
+      <h2>Subscribe to our Newsletter</h2>
+      <form class="subscribe">
+        <input type="email" placeholder="Your Email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</Layout>
+
+<style>
+
+
+  .contact-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #151515;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-</style>
+
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: left;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .contact-info {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .contact-item svg {
+    fill: #007bff;
+    width: 24px;
+    height: 24px;
+  }
+
+  .form {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition:
+      border-color 0.3s,
+      box-shadow 0.3s;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .newsletter {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .newsletter h2 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+  }
+
+  .subscribe {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .subscribe input {
+    flex: 1;
+    max-width: 300px;
+>>>>>>> 4ccfa41afe56269f065e2d03cc4163c63ccec5a3
+  }
+</style> -->

@@ -13,7 +13,8 @@
     "astro": "^5.1.7",
     "astro-icon": "^1.1.5",
     "postcss": "^8.5.1",
-    "postcss-preset-env": "^10.1.3"
+    "postcss-preset-env": "^10.1.3",
+    "sport-news-blog": "file:"
   },
   "devDependencies": {
     "sass": "^1.83.4"
