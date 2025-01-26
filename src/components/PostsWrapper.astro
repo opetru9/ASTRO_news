@@ -1,26 +1,19 @@
 ---
-import PostCard from "./PostCard.astro"; 
+import PostCard from "./PostCard.astro";
 
-interface Post {
-  imageUrl: string;
-  title: string;
-  description: string;
-}
-
-interface Props {
-  posts: Post[];
-}
-
-const { posts } = Astro.props as Props;
+const { posts } = Astro.props;
 ---
 
 <div class="posts-wrapper">
   {
     posts.map((post) => (
       <PostCard
-        imageUrl={post.imageUrl}
+        imageUrl={post.urlToImage}
         title={post.title}
         description={post.description}
+        author={post.author}
+        publishedAt={post.publishedAt}
+        url={post.url}
       />
     ))
   }

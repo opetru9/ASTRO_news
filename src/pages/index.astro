@@ -1,28 +1,20 @@
 ---
 import PostsWrapper from "../components/PostsWrapper.astro";
-import PostCard from "../components/PostCard.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-const posts = [
-  {
-    imageUrl: "../assets/icons/leaves-6640617.jpg",
-    title: "Post Title 1",
-    description: "This is a brief description of the post.",
-  },
-  {
-    imageUrl: "https://via.placeholder.com/300x200",
-    title: "Post Title 2",
-    description: "Another description for a different post.",
-  },
-  {
-    imageUrl: "https://via.placeholder.com/300x200",
-    title: "Post Title 3",
-    description: "A third post with a unique description.",
-  },
-];
+import fetchSportsNews from "../data/NewsAPI";
+
+const posts = await fetchSportsNews();
+console.log("Posts în consola browserului:", posts);
 ---
 
 <Layout>
   <Welcome />
   <PostsWrapper posts={posts} />
+  <script>
+    import fetchSportsNews from "../data/NewsAPI";
+
+    const posts = await fetchSportsNews();
+    console.log("Posts în consola browserului:", posts);
+  </script>
 </Layout>

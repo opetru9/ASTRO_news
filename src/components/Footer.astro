@@ -3,14 +3,47 @@
 ---
 
 <footer>
-  <p>
-    <small>
-      Copyright &copy;
-      <span id="copyright"></span>
-      | All rights reserved
-    </small>
-  </p>
+  <div class="footer-wrapper">
+    <div>
+      <small>
+        Copyright &copy;
+        <span id="copyright"></span>
+        | All rights reserved
+      </small>
+    </div>
+    <div class="footer-links">
+      <a href="../privacy-policy/" class="footer-link">Privacy Policy</a>
+      <a href="../terms-and-conditions/" class="footer-link"
+        >Terms and Conditions</a
+      >
+    </div>
+  </div>
 </footer>
+<style>
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+  }
+
+  .footer-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+</style>
 
 <script>
   const copyrightElement = document.querySelector("#copyright");

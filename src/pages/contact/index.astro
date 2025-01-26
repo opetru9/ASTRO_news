@@ -1,7 +1,128 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+
 ---
 
-<Layout>
-    contact
-</Layout>
+<div class="container">
+  <div class="contact-one__inner">
+    <h3 class="contact-one__title">Get in Touch</h3>
+    <p class="contact-one__text">
+      Have questions about our casino events or need assistance with booking? <br
+      />
+      Fill out the form below, and we'll get back to you shortly!
+    </p>
+    <form
+      class="contact-form-validated contact-one__form"
+      method="post"
+      novalidate
+    >
+      <div class="row">
+        <div class="col-xl-6 col-lg-6">
+          <div class="contact-one__input-box">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+          <div class="contact-one__input-box">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+          <div class="contact-one__input-box">
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+          <div class="contact-one__input-box">
+            <div class="select-box">
+              <select class="selectmenu wide" name="event_type" required>
+                <option value="" selected disabled>Choose Event Type</option>
+                <option value="poker">Poker Tournament</option>
+                <option value="blackjack">Blackjack Championship</option>
+                <option value="roulette">Roulette Night</option>
+                <option value="vip">VIP Experience</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="contact-one__input-box text-message-box">
+            <textarea name="message" placeholder="Your Message or Inquiry"
+            ></textarea>
+          </div>
+          <div class="contact-one__btn-box">
+            <button type="submit" class="thm-btn contact-one__btn">
+              Submit Now<span class="icon-arrow-right"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="result"></div>
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .contact-one__inner {
+    text-align: center;
+  }
+
+  .contact-one__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-one__text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-one__input-box {
+    margin-bottom: 1rem;
+  }
+
+  .contact-one__input-box input,
+  .contact-one__input-box textarea,
+  .contact-one__input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .contact-one__btn-box {
+    text-align: center;
+  }
+
+  .contact-one__btn {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-one__btn:hover {
+    background-color: #005bb5;
+  }
+</style>
