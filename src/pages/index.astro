@@ -1,20 +1,11 @@
 ---
-import PostsWrapper from "../components/PostsWrapper.astro";
+import PostsWrapper from "../components/PostWrapper";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import fetchSportsNews from "../data/NewsAPI";
 
-const posts = await fetchSportsNews();
-console.log("Posts în consola browserului:", posts);
 ---
 
 <Layout>
   <Welcome />
-  <PostsWrapper posts={posts} />
-  <script>
-    import fetchSportsNews from "../data/NewsAPI";
-
-    const posts = await fetchSportsNews();
-    console.log("Posts în consola browserului:", posts);
-  </script>
+  <PostsWrapper />
 </Layout>
